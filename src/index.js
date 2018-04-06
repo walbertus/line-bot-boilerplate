@@ -15,3 +15,7 @@ app.use((res, req, next) => {
     res.status(404);
     res.type('txt').send('404 - Page Not Found');
 });
+
+app.listen(3000, (err) => {
+    console.log('server started');
+})
