@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
 
 app.post('/webhook/line/v1', line.middleware, lineApiHandler);
 
-app.listen(3000, (err) => {
+const port = process.env.PORT || 3000;
+
+app.listen(port, (err) => {
+    if (err) {
+        console.log(err);
+    }
     console.log('server started');
 })
