@@ -12,4 +12,5 @@ const handleEvent = (event) => {
         };
         return line.client.replyMessage(event.replyToken, message);
     }
+    return Bluebird.resolve(null);
 }
